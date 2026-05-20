@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "fishing-mod-v2",
+	"version": "${version}",
+	"name": "Fishing Mod V2",
+	"description": "Auto fishing mod with shift/sneak-based minigame support. Detects fish bite, waits, then auto-shifts to catch fish.",
+	"authors": [
+		"Pitza"
+	],
+	"contact": {},
+	"license": "CC0-1.0",
+	"icon": "assets/fishing-mod-v2/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"fishing_mod_v2.Fishingmodv2"
+		],
+		"client": [
+			"fishing_mod_v2.client.Fishingmodv2Client"
+		]
+	},
+	"mixins": [
+		"fishing-mod-v2.mixins.json",
+		{
+			"config": "fishing-mod-v2.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
